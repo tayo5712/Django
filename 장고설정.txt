@@ -1,0 +1,52 @@
+$ python -m venv venv	
+# 가상환경 설정
+
+$ source venv/Scripts/activate
+# 가상환경 활성화
+
+vscode 들어가기
+인터프리터 venv로 바꿔주기
+
+$ pip install django==3.2.13
+# 장고 설치
+
+$ pip freeze > requirements.txt  (x)
+# 패키지 목록 생성
+
+$ django-admin startproject 프로젝트이름
+ # 프로젝트 생성
+
+$ python manage.py runserver
+# 실행
+
+$ python manage.py startapp 앱이름(복수형 권고)
+# 앱 생성(연습 할때 articles로 만들었음)
+
+# settings.py에 INSTALLED_APPS에 앱등록
+
+
+# url 에서 path('dinner/', views.dinner) 한다음
+
+# views 가서 함수 만들기 
+
+def dinner(request):
+    foods = ['가지덮밥', '차돌된장찌개', '오리주물럭', '열무국수']
+    context = {
+        'foods': foods,
+    }
+    return render(request, 'dinner.html',)
+
+# articles - templates 폴더에 dinner.html 생성
+
+
+
+
+
+상속 하려면 최상위 폴더에 template을 만들고 
+base.html을 만든다
+
+다른 폴더에서 쓰려면 settings 들어가서 경로 변경
+'DIRS': [BASE_DIR/'templates'],
+
+
+

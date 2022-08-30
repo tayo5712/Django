@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Greeting</h1>
+  <p>저는 {{ name|lower }} 입니다.</p>
+  <p>나이는 {{ age }}살</p>
+  <p>가족은 {{ family }} 입니다.</p>
+  <p>가족은 {{ family|join:' ' }} 입니다.</p>
+  <p>우리 가족의 첫 번째는 {{ family.0 }}입니다.</p>
+{% endblock content %}
+

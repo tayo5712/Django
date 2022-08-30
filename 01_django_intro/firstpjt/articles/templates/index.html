@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>INDEX</h1>
+  <ul>
+    <li><a href="{% url 'throw' %}">Throw</a></li>
+    <li><a href="{% url 'greeting' %}">greeting</a></li>
+    <li><a href="{% url 'dinner' %}">dinner</a></li>
+    <li><a href="{% url 'hello' 'anoymous' %}">hello</a></li>
+  </ul>
+{% endblock content %}
+

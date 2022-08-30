@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>메뉴</h1>
+  <ul>
+    {% for food in foods  %}
+      <li>{{ food }}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
+
+
